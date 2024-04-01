@@ -1,0 +1,53 @@
+<form method="post" action="/" id="user-info">
+  <fieldset id="username">
+    <label for="Name">Your Name: </label>
+    <input name="Name" id="Name" required />
+  </fieldset>
+
+  <fieldset>
+    <legend>Select A Sex Option:</legend>
+    <div>
+      <input type="radio" id="AMAB" name="AMAB" value="AMAB" />
+      <label for="AMAB">AMAB</label>
+    </div>
+    <div>
+      <input type="radio" id="AFAB" name="AFAB" value="AFAB" />
+      <label for="AFAB">AFAB</label>
+    </div>
+  </fieldset>
+
+  <fieldset id="height">
+    <label for="height">Your Height: </label>
+    <input name="height" id="height" required />
+  </fieldset>
+
+  <fieldset id="weight">
+    <label for="weight">Your Weight: </label>
+    <input name="weight" id="weight" required />
+  </fieldset>
+
+  <fieldset>
+    <label for="splitOption"><h1>What is your Ideal Split?</h1></label>
+    <input name="splitOption" type="text" />
+  </fieldset>
+
+  <button type="submit" value="submit" id="submit">
+    <h2>Lets Find You A Workout</h2>
+  </button>
+</form>
+
+<aside>
+  <h1>{{Name}} Workout Plan</h1>
+  <ul>
+    <li>{{Name}}</li>
+    {{#if AMAB}}
+      <li>{{AMAB}}</li>
+    {{/if}}
+    {{#if AFAB}}
+      <li>{{AFAB}}</li>
+    {{/if}}
+    <li>{{height}}</li>
+    <li>{{weight}}</li>
+  </ul>
+  <p>{{message}}</p>
+</aside>
